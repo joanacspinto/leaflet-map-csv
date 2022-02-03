@@ -72,7 +72,7 @@
      //   opacity: 1
      // }).bindPopup(row.Title);
       
-      marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+      
       
       // ICON
     var marker = L.marker([row.Latitude, row.Longitude], {
@@ -83,6 +83,8 @@
     iconSize: [25, 40]
   })
 }).bindPopup(row.Title);
+      
+      marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
              
       
       
