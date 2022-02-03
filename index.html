@@ -55,16 +55,6 @@
   controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
 
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
-
-    // added by JPINTO
-    var marker = L.marker([row.Latitude, row.Longitude], {
-  opacity: 1,
-  // Customize your icon
-  icon: L.icon({
-    iconUrl: './jamon2.png',
-    iconSize: [40, 60]
-  })
-}).bindPopup(row.Title);
     
     
   // Read markers data from data.csv
@@ -78,9 +68,21 @@
     for (var i in data) {
       var row = data[i];
 
-      var marker = L.marker([row.Latitude, row.Longitude], {
-        opacity: 1
-      }).bindPopup(row.Title);
+      // var marker = L.marker([row.Latitude, row.Longitude], {
+     //   opacity: 1
+     // }).bindPopup(row.Title);
+      
+      
+      // added by JPINTO
+    var marker = L.marker([row.Latitude, row.Longitude], {
+  opacity: 1,
+  // Customize your icon
+  icon: L.icon({
+    iconUrl: './jamon2.png',
+    iconSize: [40, 60]
+  })
+}).bindPopup(row.Title);
+      
       
       marker.addTo(map);
     }
