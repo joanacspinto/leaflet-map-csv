@@ -56,6 +56,17 @@
 
   // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
 
+    // added by JPINTO
+    var marker = L.marker([row.Latitude, row.Longitude], {
+  opacity: 1,
+  // Customize your icon
+  icon: L.icon({
+    iconUrl: './jamon.png',
+    iconSize: [40, 60]
+  })
+}).bindPopup(row.Title);
+    
+    
   // Read markers data from data.csv
   $.get('./locationMRIberians.csv', function(csvString) {
 
